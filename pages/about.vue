@@ -1,11 +1,9 @@
 <script setup>
 definePageMeta({
-  layout: 'bare',
+  layout: 'bare'
 })
 </script>
 
 <template>
-  <section>
-    <p>This page will be displayed at the /about route.</p>
-  </section>
+  <p>This page will be displayed at the /about route.</p>
 </template>

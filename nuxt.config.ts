@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    apiKey: '', // Default to an empty string, automatically set at runtime using process.env.NUXT_API_KEY
+    public: {
+      // Override by NUXT_PUBLIC_API_URL
+      apiURL: process.env.NUXT_PUBLIC_API_URL // Exposed to the frontend as well.
+    }
+  },
   // https://nuxt.com/docs/getting-started/styling#lcp-advanced-optimizations
   hooks: {
     'build:manifest': (manifest) => {
@@ -13,13 +20,16 @@ export default defineNuxtConfig({
           if (css[i].startsWith('entry')) css.splice(i, 1)
         }
       }
-    },
+    }
   },
-  modules: ['@nuxtjs/fontaine', '@nuxt/eslint'],
+  modules: ['@nuxtjs/fontaine', '@nuxt/eslint', 'nuxt-typed-router'],
   eslint: {
     // checker: true,
     config: {
-      stylistic: true,
-    },
-  },
+      // stylistic: true,
+      stylistic: {
+        commaDangle: 'never'
+      }
+    }
+  }
 })
