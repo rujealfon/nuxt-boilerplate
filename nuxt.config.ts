@@ -20,6 +20,18 @@ export default defineNuxtConfig({
           if (css[i].startsWith('entry')) css.splice(i, 1)
         }
       }
+    },
+    'pages:extend'(pages) {
+      pages.push({
+        name: 'login',
+        path: '/login',
+        file: '@/pages/auth/login.vue'
+      },
+      {
+        name: 'register',
+        path: '/register',
+        file: '@/pages/auth/register.vue'
+      })
     }
   },
   modules: ['@nuxtjs/fontaine', '@nuxt/eslint', 'nuxt-typed-router'],
