@@ -13,7 +13,10 @@ export default withNuxt(
     rules: {
       'vue/no-multiple-template-root': 'off',
       // 'vue/comma-dangle': 'off'
-      'comma-dangle': ['off', 'never']
+      'comma-dangle': ['off', 'never'],
+      'vue/block-order': ['error', {
+        order: ['script', 'template', 'style']
+      }]
     }
   }
 )

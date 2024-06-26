@@ -29,6 +29,11 @@
             Post 2
           </NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/users/1">
+            Users
+          </NuxtLink>
+        </li>
       </ul>
     </nav>
   </header>

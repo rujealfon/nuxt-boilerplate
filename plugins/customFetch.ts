@@ -2,7 +2,7 @@ export default defineNuxtPlugin(() => {
   const userAuth = useCookie('token')
   const config = useRuntimeConfig()
 
-  const api = $fetch.create({
+  const customFetch = $fetch.create({
     baseURL: config.public.apiURL ?? 'https://api.nuxt.com',
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onRequest({ request, options, error }) {
@@ -10,10 +10,7 @@ export default defineNuxtPlugin(() => {
       if (userAuth.value) {
         const headers = options.headers ||= {}
 
-        // // Add Authorization header
-        // options.headers = options.headers || {}
-        // options.headers.Authorization = `Bearer ${userAuth.value}`
-
+        // Add Authorization header
         if (Array.isArray(headers)) {
           headers.push(['Authorization', `Bearer ${userAuth.value}`])
         }
@@ -37,10 +34,10 @@ export default defineNuxtPlugin(() => {
     }
   })
 
-  // Expose to useNuxtApp().$api
+  // Expose to useNuxtApp().$customFetch
   return {
     provide: {
-      api
+      customFetch
     }
   }
 })

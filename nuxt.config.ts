@@ -1,3 +1,5 @@
+// import type { NuxtPage } from 'nuxt/schema'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -32,9 +34,29 @@ export default defineNuxtConfig({
         path: '/register',
         file: '@/pages/auth/register.vue'
       })
+
+      // Remove pages that start with auth-
+      pages.filter(page => !page.name?.startsWith('auth-'))
+
+      // // Prevent creating routes for any .ts files
+      // function removePagesMatching(pattern: RegExp, pages: NuxtPage[] = []) {
+      //   const pagesToRemove = []
+      //   for (const page of pages) {
+      //     if (page.file && pattern.test(page.file)) {
+      //       pagesToRemove.push(page)
+      //     }
+      //     else {
+      //       removePagesMatching(pattern, page.children)
+      //     }
+      //   }
+      //   for (const page of pagesToRemove) {
+      //     pages.splice(pages.indexOf(page), 1)
+      //   }
+      // }
+      // removePagesMatching(/\.ts$/, pages)
     }
   },
-  modules: ['@nuxtjs/fontaine', '@nuxt/eslint', 'nuxt-typed-router'],
+  modules: ['@nuxtjs/fontaine', '@nuxt/eslint', 'nuxt-typed-router', '@pinia/nuxt'],
   eslint: {
     // checker: true,
     config: {
