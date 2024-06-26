@@ -1,5 +1,6 @@
 // import { defineStore } from 'pinia'
 import type { FetchError } from 'ofetch'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { User, Users } from '@/models/user.model'
 
 export const useUserStore = defineStore('user', () => {
