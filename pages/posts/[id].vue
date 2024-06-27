@@ -3,8 +3,9 @@ const route = useRoute('posts-id')
 
 definePageMeta({
   validate: async (route) => {
+    const params = route.params as { id: string }
     // Check if the id is made up of digits
-    return typeof route.params.id === 'string' && /^\d+$/.test(route.params.id)
+    return typeof params.id === 'string' && /^\d+$/.test(params.id)
   }
 })
 

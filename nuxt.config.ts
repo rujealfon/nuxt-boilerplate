@@ -56,7 +56,7 @@ export default defineNuxtConfig({
       // removePagesMatching(/\.ts$/, pages)
     }
   },
-  modules: ['@nuxtjs/fontaine', '@nuxt/eslint', 'nuxt-typed-router', '@pinia/nuxt'],
+  modules: ['@nuxt/eslint', 'nuxt-typed-router', '@pinia/nuxt', '@nuxt/fonts'],
   eslint: {
     // checker: true,
     config: {
@@ -65,5 +65,8 @@ export default defineNuxtConfig({
         commaDangle: 'never'
       }
     }
+  },
+  imports: {
+    dirs: ['./models']
   }
 })

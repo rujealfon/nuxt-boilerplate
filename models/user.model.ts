@@ -1,10 +1,8 @@
-import type { Paginate } from '@/models/paginate.model'
-
-export interface Users extends Paginate<User> {
-  data: User[]
+export type IUsers = IPaginate<IUser> & {
+  data: IUser[]
 }
 
-export interface User {
+export type IUser = {
   id: number
   name: string
   year: number

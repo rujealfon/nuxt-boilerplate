@@ -5,12 +5,15 @@ const props = defineProps({
   error: Object as () => NuxtError
 })
 
-const handleError = () => clearError({ redirect: '/' })
+function handleError() {
+  clearError({ redirect: '/' })
+}
 </script>
 
 <template>
   <div>
     <h2>{{ props.error?.statusCode }}</h2>
+    <p>{{ props.error?.message }}</p>
     <button @click="handleError">
       Clear errors
     </button>

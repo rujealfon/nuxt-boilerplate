@@ -1,4 +1,4 @@
-export interface Paginate<T> {
+export type IPaginate<T> = {
   data: T[]
   page: number
   per_page: number
