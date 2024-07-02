@@ -3,7 +3,7 @@ export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
 
   const customFetch = $fetch.create({
-    baseURL: config.public.apiURL ?? 'https://api.nuxt.com',
+    baseURL: config.public.apiURL,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onRequest({ request, options, error }) {
       // console.log({ options })
