@@ -56,7 +56,13 @@ export default defineNuxtConfig({
       // removePagesMatching(/\.ts$/, pages)
     }
   },
-  modules: ['@nuxt/eslint', 'nuxt-typed-router', '@pinia/nuxt', '@nuxt/fonts'],
+  modules: [
+    '@nuxt/eslint',
+    'nuxt-typed-router',
+    '@pinia/nuxt',
+    '@nuxt/fonts',
+    'nuxt-security'
+  ],
   eslint: {
     // checker: true,
     config: {
@@ -68,5 +74,10 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: ['./models']
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp'
+    }
   }
 })
