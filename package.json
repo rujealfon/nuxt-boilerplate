@@ -9,7 +9,9 @@
     "dev": "nuxt dev",
     "dev:stage": "nuxt dev --dotenv .env.stage",
     "dev:prod": "nuxt dev --dotenv .env.prod",
-    "generate": "nuxt generate",
+    "generate": "cross-env NUXT_USE_SSR=false nuxt generate",
+    "generate:stage": "cross-env NUXT_USE_SSR=false nuxt generate --dotenv .env.stage",
+    "generate:prod": "cross-env NUXT_USE_SSR=false nuxt generate --dotenv .env.prod",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -28,9 +30,12 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
+    "cross-env": "^7.0.3",
     "eslint": "^9.5.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "vite-plugin-eslint2": "^4.4.0"
+    "typescript": "^5.5.3",
+    "vite-plugin-eslint2": "^4.4.0",
+    "vue-tsc": "^2.0.26"
   }
 }

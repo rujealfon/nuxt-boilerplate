@@ -3,6 +3,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  // https://github.com/nuxt/nuxt/discussions/27519
+  ssr: process.env.NUXT_USE_SSR === 'true',
   runtimeConfig: {
     apiKey: '', // Default to an empty string, automatically set at runtime using process.env.NUXT_API_KEY
     public: {
@@ -80,4 +82,18 @@ export default defineNuxtConfig({
       crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp'
     }
   }
+  // routeRules: {
+  // '/users/*': { prerender: true }
+  // },
+  // https://nuxt.com/docs/guide/concepts/typescript
+  // typescript: {
+  //   typeCheck: true
+  // }
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ['/'],
+  //     ignore: ['/users']
+  //   }
+  // }
 })
