@@ -9,7 +9,7 @@ export function useCustomFetch<T>(
 ) {
   return useFetch(url, {
     ...options,
-    $fetch: useNuxtApp().$api
+    $fetch: useNuxtApp().$customFetch
   })
 }
 

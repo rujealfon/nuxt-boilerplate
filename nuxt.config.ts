@@ -56,6 +56,12 @@ export default defineNuxtConfig({
       //   }
       // }
       // removePagesMatching(/\.ts$/, pages)
+    },
+    'prerender:routes'({ routes }) {
+      // https://nuxt.com/docs/guide/concepts/rendering#client-side-rendering
+      if (process.env.NUXT_USE_SSR === 'true') return
+
+      routes.clear() // Do not generate any routes (except the defaults)
     }
   },
   modules: [
