@@ -14,7 +14,9 @@ console.log(route.params.id)
 </script>
 
 <template>
-  <div />
+  <section>
+    {{ route.params.id }}
+  </section>
 </template>
 
 <style scoped>

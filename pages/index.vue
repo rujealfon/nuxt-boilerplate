@@ -57,38 +57,40 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>Welcome to the homepage</h1>
-  <AppAlert>
-    This is an auto-imported component
-  </AppAlert>
-  <button
-    @click="() => {
+  <section>
+    <h1>Welcome to the homepage</h1>
+    <AppAlert>
+      This is an auto-imported component
+    </AppAlert>
+    <button
+      @click="() => {
       // getUsers()
-    }"
-  >
-    execute
-  </button>
-  <button @click="count++">
-    Count {{ count }}
-  </button>
-  <button
-    @click="() => {
-      page++
+      }"
+    >
+      execute
+    </button>
+    <button @click="count++">
+      Count {{ count }}
+    </button>
+    <button
+      @click="() => {
+        page++
       // getUsers({ page: page })
-    }"
-  >
-    Page {{ page }}
-  </button>
-  <!-- {{ users }} -->
+      }"
+    >
+      Page {{ page }}
+    </button>
+    <!-- {{ users }} -->
 
-  <ul
-    v-for="user in users?.data"
-    :key="user.id"
-  >
-    <li>{{ user.first_name }}</li>
-  </ul>
+    <ul
+      v-for="user in users?.data"
+      :key="user.id"
+    >
+      <li>{{ user.first_name }}</li>
+    </ul>
 
-  <!-- <div>{{ data }}</div> -->
-  <div>{{ error?.statusCode }}</div>
-  <div>{{ error?.statusMessage }}</div>
+    <!-- <div>{{ data }}</div> -->
+    <div>{{ error?.statusCode }}</div>
+    <div>{{ error?.statusMessage }}</div>
+  </section>
 </template>
