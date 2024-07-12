@@ -12,11 +12,11 @@ export default withNuxt(
   {
     rules: {
       'vue/no-multiple-template-root': 'off',
-      // 'vue/comma-dangle': 'off'
-      'comma-dangle': ['off', 'never'],
       'vue/block-order': ['error', {
         order: ['script', 'template', 'style']
       }],
+      // 'vue/comma-dangle': 'off'
+      'comma-dangle': ['off', 'never'],
       'import/no-mutable-exports': 'off'
     }
   }

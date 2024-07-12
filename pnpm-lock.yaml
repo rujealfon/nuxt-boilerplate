@@ -47,13 +47,10 @@ importers:
         version: 6.1.0
       '@nuxt/eslint':
         specifier: ^0.3.13
-        version: 0.3.13(eslint@9.5.0)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.5.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.5.3)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3)))(rollup@4.18.0)(typescript@5.5.3)(vite-plugin-eslint2@4.4.0(@types/eslint@8.56.10)(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
+        version: 0.3.13(eslint@9.5.0)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.5.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.5.3)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3)))(rollup@4.18.0)(typescript@5.5.3)(vite-plugin-eslint2@4.4.0(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
-      eslint:
-        specifier: ^9.5.0
-        version: 9.5.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -63,9 +60,6 @@ importers:
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
-      vite-plugin-eslint2:
-        specifier: ^4.4.0
-        version: 4.4.0(@types/eslint@8.56.10)(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
       vue-tsc:
         specifier: ^2.0.26
         version: 2.0.26(typescript@5.5.3)
@@ -78,6 +72,9 @@ packages:
 
   '@antfu/install-pkg@0.1.1':
     resolution: {integrity: sha512-LyB/8+bSfa0DFGC06zpCEfs89/XoWZwws5ygEa5D+Xsm3OfI+aXQ86VgVG7Acyef+rSZ5HE7J8rrxzrQeM3PjQ==}
+
+  '@antfu/utils@0.7.10':
+    resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
 
   '@antfu/utils@0.7.8':
     resolution: {integrity: sha512-rWQkqXRESdjXtc+7NRfK9lASQjpXJu1ayp7qi1d23zZorY+wBHVLHHoVcMsEnkqEBWTFqbztO7/QdJFzyEcLTg==}
@@ -4846,6 +4843,8 @@ snapshots:
       execa: 5.1.1
       find-up: 5.0.0
 
+  '@antfu/utils@0.7.10': {}
+
   '@antfu/utils@0.7.8': {}
 
   '@apidevtools/json-schema-ref-parser@11.6.4':
@@ -5377,7 +5376,7 @@ snapshots:
   '@iconify/utils@2.1.24':
     dependencies:
       '@antfu/install-pkg': 0.1.1
-      '@antfu/utils': 0.7.8
+      '@antfu/utils': 0.7.10
       '@iconify/types': 2.0.0
       debug: 4.3.5
       kolorist: 1.8.0
@@ -5782,7 +5781,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nuxt/eslint@0.3.13(eslint@9.5.0)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.5.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.5.3)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3)))(rollup@4.18.0)(typescript@5.5.3)(vite-plugin-eslint2@4.4.0(@types/eslint@8.56.10)(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))':
+  '@nuxt/eslint@0.3.13(eslint@9.5.0)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.5.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.5.3)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3)))(rollup@4.18.0)(typescript@5.5.3)(vite-plugin-eslint2@4.4.0(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))':
     dependencies:
       '@eslint/config-inspector': 0.4.12(eslint@9.5.0)
       '@nuxt/devtools-kit': 1.3.3(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.5.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.5.3)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3)))(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
@@ -5799,7 +5798,7 @@ snapshots:
       pathe: 1.1.2
       unimport: 3.7.2(rollup@4.18.0)
     optionalDependencies:
-      vite-plugin-eslint2: 4.4.0(@types/eslint@8.56.10)(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
+      vite-plugin-eslint2: 4.4.0(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))
     transitivePeerDependencies:
       - bufferutil
       - magicast
@@ -10001,7 +10000,7 @@ snapshots:
 
   unconfig@0.3.13:
     dependencies:
-      '@antfu/utils': 0.7.8
+      '@antfu/utils': 0.7.10
       defu: 6.1.4
       jiti: 1.21.6
 
@@ -10260,10 +10259,9 @@ snapshots:
       typescript: 5.5.3
       vue-tsc: 2.0.26(typescript@5.5.3)
 
-  vite-plugin-eslint2@4.4.0(@types/eslint@8.56.10)(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)):
+  vite-plugin-eslint2@4.4.0(eslint@9.5.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)):
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
-      '@types/eslint': 8.56.10
       chokidar: 3.6.0
       debug: 4.3.5
       eslint: 9.5.0
@@ -10272,6 +10270,7 @@ snapshots:
       rollup: 4.18.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   vite-plugin-inspect@0.8.4(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1)):
     dependencies:
