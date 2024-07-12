@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-boilerplate",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,13 +12,24 @@
     "generate": "cross-env NUXT_USE_SSR=false nuxt generate",
     "generate:stage": "cross-env NUXT_USE_SSR=false nuxt generate --dotenv .env.stage",
     "generate:prod": "cross-env NUXT_USE_SSR=false nuxt generate --dotenv .env.prod",
+    "sync:android-dev": "npx cap sync android",
+    "sync:android-stage": "cross-env NUXT_CAPACITOR_ENV=stage npx cap sync android",
+    "sync:android-prod": "cross-env NUXT_CAPACITOR_ENV=prod npx cap sync android",
+    "open:android-dev": "npx cap open android",
+    "sync:ios-dev": "npx cap sync ios",
+    "sync:ios-stage": "cross-env NUXT_CAPACITOR_ENV=stage npx cap sync ios",
+    "sync:ios-prod": "cross-env NUXT_CAPACITOR_ENV=prod npx cap sync ios",
+    "open:ios-dev": "npx cap open ios",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
   "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
     "@nuxt/fonts": "^0.7.1",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.12.2",
@@ -29,6 +40,7 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
+    "@capacitor/cli": "^6.1.0",
     "@nuxt/eslint": "^0.3.13",
     "cross-env": "^7.0.3",
     "eslint": "^9.5.0",

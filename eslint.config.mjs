@@ -16,7 +16,14 @@ export default withNuxt(
       'comma-dangle': ['off', 'never'],
       'vue/block-order': ['error', {
         order: ['script', 'template', 'style']
-      }]
+      }],
+      'import/no-mutable-exports': 'off'
     }
+  }
+).prepend(
+  {
+    // https://eslint.org/docs/latest/use/configure/ignore
+    ignores: ['android/', 'ios/']
+    // ignores: ['**/_nuxt/']
   }
 )
