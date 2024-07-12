@@ -1,11 +1,12 @@
+import type { FetchContext } from 'ofetch'
+
 export default defineNuxtPlugin(() => {
   const userAuth = useCookie('token')
   const config = useRuntimeConfig()
 
   const customFetch = $fetch.create({
     baseURL: config.public.apiURL,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    onRequest({ request, options, error }) {
+    onRequest({ options }: FetchContext) {
       // console.log({ options })
       if (userAuth.value) {
         const headers = options.headers ||= {}
@@ -22,13 +23,13 @@ export default defineNuxtPlugin(() => {
         }
       }
     },
-    onResponse({ response }) {
-      if (response._data.token) {
+    onResponse({ response }: FetchContext) {
+      if (response?._data.token) {
         userAuth.value = response._data.token
       }
     },
-    async onResponseError({ response }) {
-      if (response.status === 401) {
+    async onResponseError({ response }: FetchContext) {
+      if (response?.status === 401) {
         await navigateTo('/login')
       }
     }

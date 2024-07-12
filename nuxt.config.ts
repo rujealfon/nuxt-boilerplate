@@ -87,14 +87,14 @@ export default defineNuxtConfig({
     headers: {
       crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp'
     }
-  }
+  },
   // routeRules: {
   // '/users/*': { prerender: true }
   // },
   // https://nuxt.com/docs/guide/concepts/typescript
-  // typescript: {
-  //   typeCheck: true
-  // }
+  typescript: {
+    typeCheck: true
+  }
   // nitro: {
   //   prerender: {
   //     crawlLinks: true,

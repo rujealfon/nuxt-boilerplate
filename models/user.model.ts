@@ -7,5 +7,7 @@ export type IUser = {
   name: string
   year: number
   color: string
+  first_name: string
+  last_name: string
   pantone_value: string
 }
