@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">nuxt-boilerplate</string>
+    <string name="title_activity_main">nuxt-boilerplate</string>
+    <string name="package_name">com.nuxt.boilerplate</string>
+    <string name="custom_url_scheme">com.nuxt.boilerplate</string>
+</resources>
