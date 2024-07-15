@@ -58,8 +58,11 @@ const count = ref(0)
 
 <template>
   <section>
-    <h1>Welcome to the homepage</h1>
-    <AppAlert>
+    <h1 class="welcome">
+      Welcome to the homepage
+      <span class="here">HERE</span>
+    </h1>
+    <AppAlert class="text-blue-500">
       This is an auto-imported component
     </AppAlert>
     <button

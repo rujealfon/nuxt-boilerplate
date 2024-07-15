@@ -3,8 +3,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   // https://github.com/nuxt/nuxt/discussions/27519
   ssr: process.env.NUXT_USE_SSR === 'true',
+
   runtimeConfig: {
     apiKey: '', // Default to an empty string, automatically set at runtime using process.env.NUXT_API_KEY
     public: {
@@ -12,6 +14,7 @@ export default defineNuxtConfig({
       apiURL: process.env.NUXT_PUBLIC_API_URL // Exposed to the frontend as well.
     }
   },
+
   // https://nuxt.com/docs/getting-started/styling#lcp-advanced-optimizations
   hooks: {
     'build:manifest': (manifest) => {
@@ -64,13 +67,16 @@ export default defineNuxtConfig({
       routes.clear() // Do not generate any routes (except the defaults)
     }
   },
+
   modules: [
     '@nuxt/eslint',
     'nuxt-typed-router',
     '@pinia/nuxt',
     '@nuxt/fonts',
-    'nuxt-security'
+    'nuxt-security',
+    '@nuxtjs/tailwindcss'
   ],
+
   eslint: {
     // checker: true,
     config: {
@@ -80,21 +86,21 @@ export default defineNuxtConfig({
       }
     }
   },
+
   imports: {
     dirs: ['./models']
   },
+
   security: {
     headers: {
       crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp'
     }
   },
+
   // routeRules: {
   // '/users/*': { prerender: true }
   // },
   // https://nuxt.com/docs/guide/concepts/typescript
-  typescript: {
-    typeCheck: true
-  }
   // nitro: {
   //   prerender: {
   //     crawlLinks: true,
@@ -102,4 +108,18 @@ export default defineNuxtConfig({
   //     ignore: ['/users']
   //   }
   // }
+  typescript: {
+    typeCheck: true
+  },
+
+  compatibilityDate: '2024-07-12',
+
+  css: [
+    'assets/css/main.css'
+  ],
+
+  tailwindcss: {
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
+    configPath: 'tailwind.config'
+  }
 })

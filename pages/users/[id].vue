@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute('users-id')
-const router = useRouter()
+// const router = useRouter()
 
 const userStore = useUserStore()
 const { users } = storeToRefs(userStore)
@@ -37,7 +37,7 @@ console.log(data)
           return
         }
 
-        router.push({ name: 'users-id', params: { id } })
+        navigateTo({ name: 'users-id', params: { id } })
       }"
     >
       Previous
@@ -46,7 +46,8 @@ console.log(data)
     <button
       @click="() => {
         const id = parseInt(userId) + 1
-        router.push({ name: 'users-id', params: { id } })
+
+        navigateTo({ name: 'users-id', params: { id } })
       }"
     >
       Next
