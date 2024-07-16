@@ -66,13 +66,17 @@ const count = ref(0)
       This is an auto-imported component
     </AppAlert>
     <button
+      class="ml-4 flex h-24 border-2 border-gray-300 p-3 text-gray-700 shadow-md"
       @click="() => {
       // getUsers()
       }"
     >
       execute
     </button>
-    <button @click="count++">
+    <button
+      class="btn scale-125 opacity-50 hover:scale-150 hover:opacity-75 "
+      @click="count++"
+    >
       Count {{ count }}
     </button>
     <button

@@ -5,7 +5,9 @@ export default <Partial<Config>>{
   theme: {
     extend: {}
   },
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui')
+  ],
   daisyui: {
     themes: [
       'light',

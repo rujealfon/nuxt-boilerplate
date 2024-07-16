@@ -25,3 +25,4 @@ logs
 
 # Editor directories and files
 !.vscode/settings.json
+!.vscode/extensions.json

@@ -1,3 +1,4 @@
+import tailwind from 'eslint-plugin-tailwindcss'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 // https://eslint.nuxt.com/packages/module#manual-setup
@@ -9,18 +10,20 @@ export default withNuxt(
   //     'no-console': 'off' // allow console.log in TypeScript files
   //   }
   // },
+  ...tailwind.configs['flat/recommended'],
   {
     rules: {
+      // 'import/no-mutable-exports': 'off',
       // 'vue/no-multiple-template-root': 'off',
+      // 'vue/comma-dangle': 'off'
       'vue/block-order': ['error', {
         order: ['script', 'template', 'style']
       }],
-      // 'vue/comma-dangle': 'off'
       'comma-dangle': ['off', 'never'],
-      'import/no-mutable-exports': 'off'
+      'tailwindcss/no-custom-classname': ['off']
     }
   }
-).prepend(
+).append(
   {
     // https://eslint.org/docs/latest/use/configure/ignore
     ignores: ['android/', 'ios/']

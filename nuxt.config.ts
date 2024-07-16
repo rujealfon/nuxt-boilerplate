@@ -120,6 +120,9 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
-    configPath: 'tailwind.config'
+    configPath: 'tailwind.config',
+    config: {
+      plugins: ['prettier-plugin-tailwindcss']
+    }
   }
 })
