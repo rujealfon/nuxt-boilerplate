@@ -3,6 +3,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  // builder: 'rspack',
 
   // https://github.com/nuxt/nuxt/discussions/27519
   ssr: process.env.NUXT_USE_SSR === 'true',
@@ -122,7 +123,15 @@ export default defineNuxtConfig({
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
     configPath: 'tailwind.config',
     config: {
-      plugins: ['prettier-plugin-tailwindcss']
+      plugins: [
+        'prettier-plugin-tailwindcss'
+      ]
+    }
+  },
+
+  postcss: {
+    plugins: {
+      // autoprefixer: {}
     }
   }
 })

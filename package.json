@@ -29,31 +29,32 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@capacitor/android": "^6.1.0",
-    "@capacitor/core": "^6.1.0",
-    "@capacitor/ios": "^6.1.0",
-    "@nuxt/fonts": "^0.7.1",
-    "@pinia/nuxt": "^0.5.1",
-    "eslint-plugin-tailwindcss": "^3.17.4",
-    "nuxt": "^3.12.3",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@nuxt/fonts": "^0.7.2",
+    "@nuxt/rspack-builder": "^3.12.2",
+    "@pinia/nuxt": "^0.5.5",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "nuxt": "^3.14.0",
     "nuxt-security": "2.0.0-rc.9",
-    "nuxt-typed-router": "^3.6.5",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.31",
-    "vue-router": "^4.4.0"
+    "nuxt-typed-router": "^3.7.0",
+    "pinia": "^2.2.6",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@capacitor/cli": "^6.1.0",
+    "@capacitor/cli": "^6.1.2",
     "@nuxt/eslint": "^0.3.13",
-    "@nuxtjs/tailwindcss": "^6.12.1",
-    "autoprefixer": "^10.4.19",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
-    "daisyui": "^4.12.10",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.5",
-    "typescript": "^5.5.3",
-    "vue-tsc": "^2.0.26"
+    "daisyui": "^4.12.14",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.10"
   }
 }
